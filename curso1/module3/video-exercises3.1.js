@@ -43,9 +43,9 @@ function minAndMax(numbers) {
 function sameVocalsQuantity(text) {
   let result = false;
   let words = text.split(" "); // ['oi', 'ei'];
-  for (let i = 0; i < words.length; i++) {
+  for (let i = 0; i < words.length - 1; i++) {
     let word = words[i];
-    let nextWord = words[i + 1] || "";
+    let nextWord = words[i + 1];
 
     if (vocalsQuantity(word) === vocalsQuantity(nextWord)) {
       result = true;
